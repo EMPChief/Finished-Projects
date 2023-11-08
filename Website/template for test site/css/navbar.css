@@ -1,0 +1,49 @@
+/* Styling for the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    z-index: 100;
+    height: 60px;
+}
+
+/* Styling for the navigation bar's list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for individual navigation items */
+nav li {
+    margin-right: 15px;
+}
+
+/* Styling for navigation links */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Styling for navigation links on hover */
+nav a:hover {
+    background-color: #db19633d;
+    border-radius: 5px;
+}
+
+/* Better styling for the navigation links */
+nav a.links {
+    font-size: 18px;
+}
+
+/* Add a subtle shadow to the navigation bar */
+nav {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
