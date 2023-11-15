@@ -40,7 +40,6 @@ const data = [
 ];
 
 const Work = () => {
-  // Define styles as an object
   const styles = {
     container: 'max-w-[1040px] m-auto md:pl-20 p-4 py-16',
     title: 'text-4xl font-bold text-center text-green-500',
