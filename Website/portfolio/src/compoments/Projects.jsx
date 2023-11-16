@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectItems from './Projectitems';
 import numberCounter from '../assets/numbercounter.png';
 import randomiser from '../assets/randomiser.png';
-import takeInputAndReturnValue from '../assets/takeinputandreturnavalue.png';
+import Todo from '../assets/Todo.png';
 import website from '../assets/website.png';
 
 function Projects() {
@@ -22,10 +22,10 @@ function Projects() {
         Some of my projects
       </h2>
       <div className={styles.grid}>
-        <ProjectItems img={numberCounter} title='Number Counter' />
-        <ProjectItems img={randomiser} title='Number Randomiser' />
-        <ProjectItems img={takeInputAndReturnValue} title='Takes an input and outputs a text' />
-        <ProjectItems img={website} title='Website' />
+        <ProjectItems img={numberCounter} title='Number Counter' link='home' description='A project that counts numbers.' />
+        <ProjectItems img={randomiser} title='Number Randomiser' link='/home' description='A project that counts numbers.' />
+        <ProjectItems img={Todo} title='Todo List' link='https://todo.empchief.com/' description='Its a working todo list with backend' />
+        <ProjectItems img={website} title='Website' link='/home' description='A project that counts numbers.' />
       </div>
     </div>
   );

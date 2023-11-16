@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProjectItems({ img, title }) {
+function ProjectItems({ img, title, link, description }) {
   const styles = {
     container: 'relative flex items-center justify-center h-auto w-full shadow-xl shadow-green-300 rounded-xl group hover:bg-gradient-to-r from-red-600',
     image: 'rounded-xl group-hover:opacity-10',
@@ -15,8 +15,8 @@ function ProjectItems({ img, title }) {
       <img src={img} alt={title} className={styles.image} />
       <div className={styles.infoContainer}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.category}>Projects</p>
-        <a href="">
+        <p className={styles.category}>{description}</p>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <p className={styles.link}>
             More info here...
           </p>
