@@ -22,8 +22,8 @@ function Projects() {
         My programming projects
       </h2>
       <div className={styles.grid}>
-        <ProjectItems img={numberCounter} title='Snake Game' link='home' description='A project that counts numbers.' />
-        <ProjectItems img={Snake} title='Number Randomize' link='https://mega.nz/folder/b2wB3LTA#3qZZERxjUA8ggZSzm8hopA' description='A snake game made it python code and saves score in a text file.' />
+        <ProjectItems img={numberCounter} title='number' link='home' description='A project that counts numbers.' />
+        <ProjectItems img={Snake} title='Snake Game' link='https://mega.nz/folder/b2wB3LTA#3qZZERxjUA8ggZSzm8hopA' description='A snake game made it python code and saves score in a text file.' />
         <ProjectItems img={Todo} title='Todo List' link='https://todo.empchief.com/' description='A todo list that interact with backend to save, edit, delete and complete object under you find a link for it' />
         <ProjectItems img={website} title='Website' link='http://trial.empchief.com/' description='My first page made out off pure css and html with no framework' />
       </div>
