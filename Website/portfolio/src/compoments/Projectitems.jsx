@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProjectItems({ img, title, link, description }) {
   const styles = {
-    container: 'relative flex items-center justify-center h-auto w-full shadow-xl shadow-green-300 rounded-xl group hover:bg-gradient-to-r from-stone-800',
+    container: 'relative flex items-center justify-center h-auto w-full shadow-xl shadow-green-300 rounded-xl group hover:bg-gradient-to-r from-stone-300',
     image: 'rounded-xl group-hover:opacity-10',
     infoContainer: 'hidden group-hover:flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center',
     title: 'text-2xl font-bold text-green-600 tracking-wider',
