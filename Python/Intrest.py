@@ -5,6 +5,8 @@
     :return: The `interest_calculator` function returns a tuple containing the total interest, principle
     amount, interest rate, and time.
 """
+
+
 def interest_calculator():
     principle = 0
     rate = 0
@@ -26,15 +28,17 @@ def interest_calculator():
 
 
 def main():
-    while  True:
+    while True:
         storing_interest = interest_calculator()
         print(f"Interest: {storing_interest[0]}$")
         print(f"Principle amount: {storing_interest[1]}$")
         print(f"Interest rate: {storing_interest[2]}%")
         print(f"Time: {storing_interest[3]}years\n")
-        another_calculation = input("Do you want to perform another calculation? (yes/no): ")
+        another_calculation = input(
+            "Do you want to perform another calculation? (yes/no): ")
         if another_calculation.lower() != "yes":
             break
 
-if  __name__ == "__main__":
+
+if __name__ == "__main__":
     main()

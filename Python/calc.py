@@ -11,27 +11,35 @@ def display_menu():
     print("5. Exit")
 
 # Define a function to prompt the user to enter two numbers.
+
+
 def get_numbers():
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
     return num1, num2
 
 # Define the main function to run the calculator.
+
+
 def add(num1, num2):
     return num1 + num2
+
 
 def subtract(num1, num2):
     return num1 - num2
 
+
 def multiply(num1, num2):
     return num1 * num2
+
 
 def divide(num1, num2):
     if num2 == 0:
         return "Error: division by zero"
     else:
         return num1 / num2
-    
+
+
 def main():
     while True:
         # Display the menu and get the user's choice.
@@ -61,6 +69,7 @@ def main():
             print(f"The result is {result}")
         else:
             print("Invalid choice. Please try again.")
+
 
 # Call the main function to run the calculator.
 main()

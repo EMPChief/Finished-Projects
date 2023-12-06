@@ -13,7 +13,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_REACT_APP_FIREBASE_APP_ID,
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

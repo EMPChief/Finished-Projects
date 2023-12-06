@@ -23,7 +23,7 @@ for i in range(int(guesses)):
 # The code is implementing a simple rock-paper-scissors game.
 
 options = ("rock", "paper", "scissors")
-player= None
+player = None
 computer = random.choice(options)
 
 while player not in options:

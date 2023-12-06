@@ -3,6 +3,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Function to generate synthetic data
+
+
 def generate_data(num_samples=1000, random_seed=42):
     np.random.seed(random_seed)
 
@@ -27,16 +29,20 @@ def generate_data(num_samples=1000, random_seed=42):
 
     return data, labels
 
+
 # Generate synthetic data
 num_samples = 10000
 data, labels = generate_data(num_samples)
 
 # Split the data into training and validation sets using scikit-learn
-train_data, val_data, train_labels, val_labels = train_test_split(data, labels, test_size=0.2, random_state=42)
+train_data, val_data, train_labels, val_labels = train_test_split(
+    data, labels, test_size=0.2, random_state=42)
 
 # Create pandas DataFrames
-train_df = pd.DataFrame(np.hstack([train_data, train_labels]), columns=['Feature 1', 'Feature 2', 'Label'])
-val_df = pd.DataFrame(np.hstack([val_data, val_labels]), columns=['Feature 1', 'Feature 2', 'Label'])
+train_df = pd.DataFrame(np.hstack([train_data, train_labels]), columns=[
+                        'Feature 1', 'Feature 2', 'Label'])
+val_df = pd.DataFrame(np.hstack([val_data, val_labels]), columns=[
+                      'Feature 1', 'Feature 2', 'Label'])
 
 # Save DataFrames to CSV files
 train_df.to_csv('train_data.csv', index=False)

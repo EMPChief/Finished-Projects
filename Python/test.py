@@ -14,6 +14,8 @@ download_dir = 'downloaded_videos'
 os.makedirs(download_dir, exist_ok=True)
 
 # Function to download a YouTube video with a progress bar
+
+
 def download_video(youtube_url):
     try:
         yt = YouTube(youtube_url)
@@ -29,6 +31,7 @@ def download_video(youtube_url):
         print(f"Downloaded: {video_title}")
     except Exception as e:
         print(f"Error: {e}")
+
 
 if __name__ == '__main__':
     youtube_url = input("Enter the YouTube URL: ")

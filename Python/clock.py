@@ -7,7 +7,7 @@ import time
 
 time_input = int(input("Input a time in seconds:"))
 
-for  a in range(time_input, 0, -1):
+for a in range(time_input, 0, -1):
     seconds = a % 60
     minutes = (a // 60) % 60
     hours = (a // 3600) % 24

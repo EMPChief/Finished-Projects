@@ -22,9 +22,13 @@ student_grade = [
     ("Amilia", "D", 50)
 ]
 
-name = lambda name: name[0]
-score = lambda score: score[2]
-grade = lambda grades:grades[1]
+
+def name(name): return name[0]
+def score(score): return score[2]
+
+
+def grade(grades): return grades[1]
+
 
 student_grade.sort(key=name, reverse=True)
 for names in student_grade:

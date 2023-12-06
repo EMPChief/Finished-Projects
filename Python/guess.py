@@ -6,7 +6,7 @@ numofguess = 5
 
 print("What number am i thinking about?")
 
-while numofguess >0:
+while numofguess > 0:
     print("You have", numofguess, "left to work with.")
     guess = int(input("Please type your guess:"))
     numofguess -= 1

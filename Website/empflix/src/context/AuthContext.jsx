@@ -1,12 +1,12 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { auth, db } from '../firebase';
+import { createContext, useContext, useEffect, useState } from "react";
+import { auth, db } from "../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-} from 'firebase/auth';
-import { setDoc, doc } from 'firebase/firestore';
+} from "firebase/auth";
+import { setDoc, doc } from "firebase/firestore";
 
 const AuthContext = createContext();
 
@@ -15,13 +15,17 @@ export function AuthContextProvider({ children }) {
 
   async function signUp(email, password) {
     try {
-      const authUser = await createUserWithEmailAndPassword(auth, email, password);
-      const userDocRef = doc(db, 'users', authUser.user.email);
+      const authUser = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const userDocRef = doc(db, "users", authUser.user.email);
       await setDoc(userDocRef, {
-        savedShows: []
+        savedShows: [],
       });
     } catch (error) {
-      console.error('Error signing up:', error.message);
+      console.error("Error signing up:", error.message);
     }
   }
 
@@ -41,7 +45,11 @@ export function AuthContextProvider({ children }) {
     return () => unsubscribe();
   }, []);
 
-  return <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
 export function useAuth() {

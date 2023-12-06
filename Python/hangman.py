@@ -6,7 +6,8 @@ word = random.choice(words)
 guesses = ""
 max_guesses = 10
 
-print(f"Welcome to hangman first game from bjørn-magne\nthe word contains {len(word)} letters in it")
+print(
+    f"Welcome to hangman first game from bjørn-magne\nthe word contains {len(word)} letters in it")
 
 while max_guesses > 0:
     missed = 0
@@ -16,7 +17,7 @@ while max_guesses > 0:
         else:
             print('_', end=' ')
             missed += 1
-            
+
     if missed == 0:
         print("\nCongratulation you guessed the word!")
         break
@@ -24,8 +25,8 @@ while max_guesses > 0:
     guesses += guess
     max_guesses -= 1
     if guess not in word:
-        print(f"Sorry {guess} is not in the word. Please try again. {max_guesses} chances left.")
-    
+        print(
+            f"Sorry {guess} is not in the word. Please try again. {max_guesses} chances left.")
+
     if max_guesses == 0:
         print("Sorry you ran out off guesses, try again")
-    

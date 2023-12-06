@@ -2,7 +2,6 @@
 import random
 
 
-
 dice_art = {
     1: ("┌─────────┐",
         "│         │",
@@ -50,7 +49,7 @@ for die in range(num_of_dice):
 
 for die in dice:
     total += die
-    
+
 
 print(f"You rolled {num_of_dice} dice.")
 print(f"Your total is {total}.")

@@ -1,13 +1,14 @@
-import React from 'react';
-import { FaRegTrashAlt } from 'react-icons/fa';
+import React from "react";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const style = {
-  li: 'flex justify-between items-center p-2 bg-blue-200 my-2 capitalize',
-  liComplete: 'flex justify-between bg-blue-400 items-center p-2 my-2 capitalize',
-  row: 'flex',
-  text: 'ml-2 cursor-pointer',
-  textComplete: 'ml-2 cursor-pointer line-through',
-  button: 'cursor-pointer flex item-center',
+  li: "flex justify-between items-center p-2 bg-blue-200 my-2 capitalize",
+  liComplete:
+    "flex justify-between bg-blue-400 items-center p-2 my-2 capitalize",
+  row: "flex",
+  text: "ml-2 cursor-pointer",
+  textComplete: "ml-2 cursor-pointer line-through",
+  button: "cursor-pointer flex item-center",
 };
 
 const Todo = ({ todo, toggleComplete, deleteTodo }) => {
@@ -16,10 +17,13 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
       <div className={style.row}>
         <input
           onChange={() => toggleComplete(todo)}
-          type='checkbox'
+          type="checkbox"
           checked={todo.completed}
         />
-        <p onClick={() => toggleComplete(todo)} className={todo.completed ? style.textComplete : style.text}>
+        <p
+          onClick={() => toggleComplete(todo)}
+          className={todo.completed ? style.textComplete : style.text}
+        >
           {todo.text}
         </p>
       </div>

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   AiOutlineMenu,
   AiOutlineHome,
   AiOutlineProject,
   AiOutlineMail,
-} from 'react-icons/ai';
-import { GrProjects } from 'react-icons/gr';
-import { BsPerson } from 'react-icons/bs';
+} from "react-icons/ai";
+import { GrProjects } from "react-icons/gr";
+import { BsPerson } from "react-icons/bs";
 
 function Sidenav() {
   const [nav, setNav] = useState(false);
@@ -15,12 +15,14 @@ function Sidenav() {
     setNav(!nav);
   };
   const styles = {
-    menuIcon: 'absolute top-4 right-4 z-[99] md:hidden',
-    navContainer: 'fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20',
-    navLink: 'w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-200 shadow-green-600 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200',
-    icon: 'size={20}',
-    linkText: 'pl-4',
-    sideNav: 'md:block hidden fixed top-[25%] left-0 z-10',
+    menuIcon: "absolute top-4 right-4 z-[99] md:hidden",
+    navContainer:
+      "fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20",
+    navLink:
+      "w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-200 shadow-green-600 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200",
+    icon: "size={20}",
+    linkText: "pl-4",
+    sideNav: "md:block hidden fixed top-[25%] left-0 z-10",
   };
 
   return (
@@ -50,7 +52,7 @@ function Sidenav() {
           </a>
         </div>
       ) : (
-        ''
+        ""
       )}
       <div className={styles.sideNav}>
         <div className="flex flex-col">
