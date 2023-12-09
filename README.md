@@ -25,11 +25,11 @@ Make sure you have the following installed on your machine:
    ```bash
    git clone https://github.com/your-username/your-repository.git
 Change into the project directory:
-
+  ```
    ```bash
 cd your-repository
+  ```
 Create a virtual environment:
-
    ```bash
 
 python -m venv venv
