@@ -26,13 +26,12 @@ Make sure you have the following installed on your machine:
    git clone https://github.com/your-username/your-repository.git
 Change into the project directory:
 
-bash
-Copy code
+   ```bash
 cd your-repository
 Create a virtual environment:
 
-bash
-Copy code
+   ```bash
+
 python -m venv venv
 Activate the virtual environment:
 
