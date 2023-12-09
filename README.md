@@ -24,8 +24,9 @@ Make sure you have the following installed on your machine:
 
    ```bash
    git clone https://github.com/your-username/your-repository.git
+     ```
 Change into the project directory:
-  ```
+
    ```bash
 cd your-repository
   ```
@@ -33,55 +34,58 @@ Create a virtual environment:
    ```bash
 
 python -m venv venv
+  ```
+  ```bash
 Activate the virtual environment:
-
+  ```
 On Windows:
 
-bash
-Copy code
+  ```bash
 .\venv\Scripts\activate
+  ```
 On macOS/Linux:
 
-bash
-Copy code
+  ```bash
 source venv/bin/activate
+  ```
 Install project dependencies:
 
-bash
-Copy code
+  ```bash
 pip install -r requirements.txt
+  ```
 Usage
 Describe how to use your project. Include examples and important information here.
 
 Useful Terminal Commands
 Activate virtual environment:
 
-bash
-Copy code
 # On Windows
+  ```bash
 .\venv\Scripts\activate
+  ```
 
 # On macOS/Linux
+  ```bash
 source venv/bin/activate
+  ```
 Deactivate virtual environment:
 
-bash
-Copy code
+  ```bash
 deactivate
+  ```
 Install/update dependencies:
 
-bash
-Copy code
+  ```bash
 pip install -r requirements.txt
+  ```
 Run your application:
 
-bash
-Copy code
+  ```bash
 python app.py
+  ```
 Additional command:
 
-bash
-Copy code
+
 # Add any other useful commands here
 Contributing
 If you'd like to contribute, please fork the repository and create a pull request.
