@@ -4,19 +4,19 @@
 int main(void)
 {
     // Declare a variable to store the number of scores
-    int number;
+    int n;
 
     // Use a do-while loop to ensure a valid number of scores is entered
     do
     {
         number = get_int("Type how many scores you want to use: ");
-    } while (number <= 0);
+    } while (n <= 0);
 
     // Declare an array to store the scores based on the user-specified number
-    int scores[number];
+    int scores[n];
 
     // Use a for loop to input the scores based on the specified number
-    for (int i = 0; i < number; ++i)
+    for (int i = 0; i < n; ++i)
     {
         scores[i] = get_int("Score number: ");
     }
@@ -25,13 +25,13 @@ int main(void)
     float sum = 0;
 
     // Use a for loop to calculate the sum of the scores
-    for (int i = 0; i < number; ++i)
+    for (int i = 0; i < n; ++i)
     {
         sum += scores[i];
     }
 
     // Calculate and print the average school grade
-    printf("Average school grade is: %f\n", sum / (float)number);
+    printf("Average school grade is: %f\n", sum / (float)n);
 
     // Indicate successful completion of the program
     return 0;
