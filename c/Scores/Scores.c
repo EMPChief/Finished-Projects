@@ -9,7 +9,7 @@ int main(void)
     // Use a do-while loop to ensure a valid number of scores is entered
     do
     {
-        number = get_int("Type how many scores you want to use: ");
+        n = get_int("Type how many scores you want to use: ");
     } while (n <= 0);
 
     // Declare an array to store the scores based on the user-specified number
