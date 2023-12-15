@@ -1,0 +1,227 @@
+/* Styling for the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    z-index: 100;
+    height: 60px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the navigation bar's list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for individual navigation items */
+nav li {
+    margin-right: 15px;
+}
+
+/* Styling for navigation links */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Styling for navigation links on hover */
+nav a:hover {
+    background-color: #db19633d;
+    border-radius: 5px;
+}
+
+/* Better styling for the navigation links */
+nav a.links {
+    font-size: 18px;
+}
+
+/* Styling for lime-colored text */
+.lime-text {
+    color: #bfff00;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Styling for the footer with green-colored text */
+.footer {
+    color: #d4af37;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Styling for cyan-colored text */
+.cyan-color {
+    color: #2df3ea;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Styling for purplish-colored text */
+.purplish-text {
+    color: #e70590;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Styling for links in the navigation bar */
+.links {
+    text-decoration: none;
+    color: lightgray;
+    font-weight: normal;
+    text-align: center;
+    font-size: 20px;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #d4af37;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust the height as needed */
+    flex-direction: column;
+    text-align: center;
+}
+
+.center-form {
+    text-align: center;
+}
+
+.center-form .box {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto; /* Adjust the margin as needed */
+}
+
+/* Styling for the background color and image */
+.background-color {
+    background: linear-gradient(to bottom, yellowgreen, lightgreen);
+    background-image: url("galaxy\ floating\ 0.png");
+    background-size: cover;
+}
+
+/* Resetting default margin, padding, and font for the entire body */
+body {
+    margin: 0;
+    padding: 60px 0 0 0; /* Add top padding to create space for the fixed navbar */
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for pictures in the gallery tab */
+.picture-in-gallery,
+.picture-in-main-site {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    border: 10px solid;
+    border-style: groove;
+}
+
+.picture-in-gallery {
+    border-color: black;
+}
+
+.picture-in-main-site {
+    border-color: gray;
+}
+/* Add these styles at the end of your existing stylesheet */
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 255, 0, 0.2); /* Green and transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling for the form labels */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Styling for form inputs and textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the submit button */
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Styling for the footer */
+footer {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
