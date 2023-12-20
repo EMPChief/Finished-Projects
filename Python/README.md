@@ -1,1 +1,0 @@
-# finished_small_projects

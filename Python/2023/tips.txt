@@ -1,0 +1,108 @@
+Certainly! Here's the full setup with the latest modifications:
+
+Models:
+python
+Copy code
+# models.py
+
+from django.db import models
+from django.utils.text import slugify
+
+class Book(models.Model):
+    name = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True, blank=True)
+    genres = models.ManyToManyField('Genre', blank=True)
+    tags = models.ManyToManyField('Tag', blank=True)
+    language = models.CharField(max_length=50)
+    publication_date = models.DateField()
+    author = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+class Chapter(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    number = models.IntegerField()
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+
+class Genre(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+Views:
+python
+Copy code
+# views.py
+
+from django.shortcuts import render, get_object_or_404
+from .models import Book, Chapter
+
+def book_detail(request, book_name):
+    book = get_object_or_404(Book, slug=book_name)
+    chapters = Chapter.objects.filter(book=book)
+    return render(request, 'book_detail.html', {'book': book, 'chapters': chapters})
+
+def chapter_detail(request, book_name, chapter_number):
+    book = get_object_or_404(Book, slug=book_name)
+    chapter = get_object_or_404(Chapter, book=book, number=chapter_number)
+    return render(request, 'chapter_detail.html', {'book': book, 'chapter': chapter})
+URLs:
+python
+Copy code
+# urls.py
+
+from django.urls import path
+from .views import book_detail, chapter_detail
+
+urlpatterns = [
+    path('<slug:book_name>/', book_detail, name='book_detail'),
+    path('<slug:book_name>/<int:chapter_number>/', chapter_detail, name='chapter_detail'),
+    # Add more URL patterns as needed
+]
+Templates:
+html
+Copy code
+<!-- book_detail.html -->
+
+<h1>{{ book.name }}</h1>
+<p>Genres: {% for genre in book.genres.all %}{{ genre.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+<p>Tags: {% for tag in book.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+<p>Language: {{ book.language }}</p>
+<p>Publication Date: {{ book.publication_date }}</p>
+<p>Author: {{ book.author }}</p>
+<p>Description: {{ book.description }}</p>
+
+<!-- Display chapters, etc. -->
+Include App URLs in Project URLs:
+python
+Copy code
+# project/urls.py
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('books/', include('yourapp.urls')),
+]
+Make sure to replace 'yourapp' with the actual name of your Django app.
+
+With this setup, you can navigate to URLs like:
+
+http://localhost:8000/books/book1name/ to view book details.
+http://localhost:8000/books/book1name/1/ to view the content of Chapter 1.
+
+
+
+

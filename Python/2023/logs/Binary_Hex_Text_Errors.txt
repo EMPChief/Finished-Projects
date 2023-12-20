@@ -1,0 +1,4 @@
+Unexpected error: 'Text' object has no attribute 'hex_to_text'
+Unexpected error: 'Text' object has no attribute 'hex_to_text'
+ValueError: invalid literal for int() with base 10: "['104', '101', '108', '108', '111', '32', '98', '105', '116', '99', '104']"
+Unexpected error: 'str' object has no attribute 'text'

@@ -1,0 +1,11 @@
+numpy
+pandas
+requests
+xlsxwriter
+jupyter
+flask
+pytube
+moviepy
+imageio
+pysubs2
+pillow
