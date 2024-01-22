@@ -1,0 +1,4 @@
+PySimpleGUI
+pyinstaller
+flask
+streamlit
